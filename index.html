@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Design Game</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💜 Relationship Design Game</h1>
+            <p>300 cards to explore your values, desires, and boundaries</p>
+        </div>
+
+        <div class="card-container" id="gameContainer">
+            <div class="progress" id="progress"></div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div id="categoryTag"></div>
+            <div class="question" id="question"></div>
+            <div class="buttons">
+                <button class="btn-yes" onclick="answer('yes')">✓ Yes</button>
+                <button class="btn-no" onclick="answer('no')">✗ No</button>
+                <button class="btn-discuss" onclick="answer('discuss')">💬 We need to talk about it</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="previousCard()">← Previous</button>
+                <button class="btn-secondary" onclick="nextCard()">Next →</button>
+                <button class="btn-secondary" onclick="randomCard()">🎲 Random</button>
+                <button class="btn-secondary" onclick="showReview()">📋 Review</button>
+            </div>
+            <div class="jump-to">
+                <input type="number" id="jumpInput" min="1" max="300" placeholder="Jump to card #">
+                <button class="btn-secondary" onclick="jumpToCard()">Go</button>
+            </div>
+        </div>
+
+        <div class="card-container review-container" id="reviewContainer">
+            <h2 style="margin-bottom: 20px; color: #667eea;">Your Responses</h2>
+            <div class="stats" id="stats"></div>
+            <div class="filter-buttons" id="filterButtons"></div>
+            <div id="reviewList" style="max-height: 400px; overflow-y: auto;"></div>
+            <button class="btn-secondary" onclick="backToGame()" style="margin-top: 20px;">← Back to Game</button>
+        </div>
+    </div>
+
+ <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+
+</body>
+</html>
