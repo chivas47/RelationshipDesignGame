@@ -1,0 +1,264 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .card-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .progress {
+            text-align: center;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .cat-future { background: #ffeaa7; color: #d63031; }
+        .cat-nonmono { background: #fab1a0; color: #e17055; }
+        .cat-decisions { background: #81ecec; color: #00b894; }
+        .cat-intimacy { background: #fd79a8; color: #d63031; }
+        .cat-values { background: #a29bfe; color: #6c5ce7; }
+        .cat-communication { background: #74b9ff; color: #0984e3; }
+        .cat-boundaries { background: #ff7675; color: #d63031; }
+        .cat-finance { background: #55efc4; color: #00b894; }
+        .cat-family { background: #fdcb6e; color: #e17055; }
+        .cat-personal { background: #dfe6e9; color: #2d3436; }
+
+        .question {
+            font-size: 1.4em;
+            color: #2d3436;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-yes {
+            background: #00b894;
+            color: white;
+        }
+
+        .btn-yes:hover { background: #00a085; }
+
+        .btn-no {
+            background: #d63031;
+            color: white;
+        }
+
+        .btn-no:hover { background: #c0281f; }
+
+        .btn-discuss {
+            background: #fdcb6e;
+            color: #2d3436;
+        }
+
+        .btn-discuss:hover { background: #f0b84d; }
+
+        .btn-secondary {
+            background: #dfe6e9;
+            color: #2d3436;
+            padding: 12px 20px;
+            font-size: 0.95em;
+        }
+
+        .btn-secondary:hover { background: #ced6d9; }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-buttons button {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .review-container {
+            display: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #636e72;
+            margin-top: 5px;
+        }
+
+        .review-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .review-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        .review-answer {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .answer-yes { background: #00b894; color: white; }
+        .answer-no { background: #d63031; color: white; }
+        .answer-discuss { background: #fdcb6e; color: #2d3436; }
+        .answer-unanswered { background: #dfe6e9; color: #636e72; }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .jump-to {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .jump-to input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2em; }
+            .card-container { padding: 25px; }
+            .question { font-size: 1.2em; }
+            .stats { grid-template-columns: 1fr; }
+        }
